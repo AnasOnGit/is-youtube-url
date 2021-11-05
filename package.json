@@ -1,6 +1,6 @@
 {
   "name": "is-youtube-url",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "verify youtube url",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,13 @@
     "id",
     "videoId",
     "video",
-    "verify"
+    "verify",
+    "is video valid",
+    "extract",
+    "extract id",
+    "youtube id",
+    "extract video id from url",
+    "extract channel id from url"
   ],
   "author": "AnasOnGit",
   "license": "ISC",
