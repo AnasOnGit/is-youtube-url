@@ -34,9 +34,31 @@ const getChannelId = (url) => {
     return null;
   }
 };
+
+// verify is video valid
+const isVideo = (url) => {
+  if (isValidUrl(url)) {
+    if (url.includes("youtu.be")) {
+      return true;
+    } else if (
+      url.includes("https://www.youtube.com/shorts/") ||
+      url.includes("https://youtube.com/shorts/")
+    ) {
+      return true;
+    } else if (url.includes("youtube.com/watch?v=")) {
+      return true;
+    } else if (url.includes("m.youtube.com/watch?v=")) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+};
 // extract video id from url
 const getVideoId = (url) => {
-  if (isValidUrl(url)) {
+  if (isVideo(url)) {
     if (url.includes("youtu.be")) {
       return url.split("/")[3];
     } else if (
@@ -56,12 +78,13 @@ const getVideoId = (url) => {
   }
 };
 
-let channelUrl = "https://www.google.com/c/AnasandAmmar";
+let channelUrl = "https://www.youtube.com/watch?v=fdbfjsb";
 
-console.log(getChannelId(channelUrl));
+console.log(isVideo(channelUrl));
 
 module.exports = {
   getVideoId,
   isValidUrl,
   getChannelId,
+  isVideo,
 };

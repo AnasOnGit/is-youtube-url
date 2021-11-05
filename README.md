@@ -5,6 +5,7 @@ Verify if YouTube URL is valid
 - Verify YouTube URL
 - Extract YouTube Video ID
 - Extract YouTube Channel ID
+- Check if Video URL is valid
 
 ## What's New?
 `YouTube shorts URL supported`
@@ -47,6 +48,17 @@ import { getChannelId} from "is-youtube-url";
 // example url
 let url = "https://www.youtube.com/c/AnasandAmmar";
 console.log(getChannelId(url)); //AnasandAmmar
+```
+
+### Is video URL valid
+```javascript
+import { isVideo } from "is-youtube-url";
+
+// example url
+let url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+console.log(isVideo(url)); //true
+
+console.log(isVideo("https://www.youtube.com/c/AnasandAmmar")); //false
 ```
 
 ## Contributing
