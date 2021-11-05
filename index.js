@@ -13,13 +13,13 @@ const possibleDomains = [
   "https://youtube.com/shorts/I1I1i1i1I1I",
 ];
 // check if url is valid
-const isValidurl = (url) => {
+const isValidUrl = (url) => {
   return possibleDomains.some((domain) => url.includes(domain));
 };
 
 //   extract channel id from url
 const getChannelId = (url) => {
-  if (isValidurl(url)) {
+  if (isValidUrl(url)) {
     if (url.includes("channel")) {
       return url.split("/")[4];
     } else if (url.includes("user")) {
@@ -36,7 +36,7 @@ const getChannelId = (url) => {
 };
 // extract video id from url
 const getVideoId = (url) => {
-  if (isValidurl(url)) {
+  if (isValidUrl(url)) {
     if (url.includes("youtu.be")) {
       return url.split("/")[3];
     } else if (
@@ -62,6 +62,6 @@ console.log(getChannelId(channelUrl));
 
 module.exports = {
   getVideoId,
-  isValidurl,
+  isValidUrl,
   getChannelId,
 };
