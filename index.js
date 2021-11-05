@@ -78,9 +78,9 @@ const getVideoId = (url) => {
   }
 };
 
-let channelUrl = "https://www.youtube.com/watch?v=fdbfjsb";
+// let channelUrl = "https://www.youtube.com/watch?v=fdbfjsb";
 
-console.log(isVideo(channelUrl));
+// console.log(isVideo(channelUrl));
 
 module.exports = {
   getVideoId,

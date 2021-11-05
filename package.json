@@ -1,6 +1,6 @@
 {
   "name": "is-youtube-url",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "verify youtube url",
   "main": "index.js",
   "scripts": {
