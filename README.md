@@ -8,7 +8,8 @@ Verify if YouTube URL is valid
 - Check if Video URL is valid
 
 ## What's New?
-`YouTube shorts URL supported`
+- YouTube shorts URL supported.
+- Verify YouTube shorts video URL.
 
 ## Installation
 `using npm`

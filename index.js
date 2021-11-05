@@ -42,7 +42,9 @@ const isVideo = (url) => {
       return true;
     } else if (
       url.includes("https://www.youtube.com/shorts/") ||
-      url.includes("https://youtube.com/shorts/")
+      url.includes("https://youtube.com/shorts/") ||
+      url.includes("http://m.youtube.com/shorts/") ||
+      url.includes("https://m.youtube.com/shorts/")
     ) {
       return true;
     } else if (url.includes("youtube.com/watch?v=")) {
