@@ -78,7 +78,6 @@ const getVideoId = (url) => {
       case url.includes("youtu.be"):
         return url.split("/")[3];
       case url.includes("https://www.youtube.com/shorts/"):
-        console.log(url)
         return url.split("/")[4].split("?")[0];
       case url.includes("https://www.youtube.com/embed/"):
         return url.split(".com/embed/")[1].split("?")[0]
@@ -95,7 +94,6 @@ const getVideoId = (url) => {
         return null;
     }
   } else {
-    console.log("not valid");
     return null;
   }
 };
